@@ -18,14 +18,17 @@ namespace findSmallestDivisor
 
             var found = false;
             string candidate = string.Empty;
-            for (int candidateSize = 1; candidateSize <= t.Length && !found; candidateSize++)
+            for (int candidateSize = 1; candidateSize < t.Length && !found; candidateSize++)
             {
+                if (t.Length % candidateSize != 0) continue;
+
                 candidate = t.Substring(0, candidateSize);
                 if (isDivisibleBy(t, candidate))
                 {
                     found = true;
                 }
             }
+
             return found
                 ? candidate.Length
                 : t.Length;
@@ -37,10 +40,10 @@ namespace findSmallestDivisor
             if (divisor.Length == 0) return false;
             if (dividend.Length % divisor.Length != 0) return false;
 
-            var factor = dividend.Length / divisor.Length;
+            var quotient = dividend.Length / divisor.Length;
 
-            return Enumerable.Range(0, factor)
-                .Aggregate(true, (acc, segmentIndex) =>
+            return Enumerable.Range(0, quotient)
+                .Aggregate(seed: true, func: (acc, segmentIndex) =>
                 {
                     if (!acc) return false;
                     var start = segmentIndex * divisor.Length;
