@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minSum", "minSum\minSum.csproj", "{ACE33046-C71F-4540-8251-C13B797F943B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minSumTest", "minSumTest\minSumTest.csproj", "{BC37C1BF-D118-42DE-A154-B20F323E6F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findSmallestDivisor", "findSmallestDivisor\findSmallestDivisor.csproj", "{89CAD615-18EC-41EF-AB57-825E72618044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findSmallestDivisorTest", "findSmallestDivisorTest\findSmallestDivisorTest.csproj", "{50E2413E-2C38-4A9C-85CA-B9B520BE9891}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACE33046-C71F-4540-8251-C13B797F943B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE33046-C71F-4540-8251-C13B797F943B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE33046-C71F-4540-8251-C13B797F943B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE33046-C71F-4540-8251-C13B797F943B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC37C1BF-D118-42DE-A154-B20F323E6F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC37C1BF-D118-42DE-A154-B20F323E6F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC37C1BF-D118-42DE-A154-B20F323E6F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC37C1BF-D118-42DE-A154-B20F323E6F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CAD615-18EC-41EF-AB57-825E72618044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CAD615-18EC-41EF-AB57-825E72618044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CAD615-18EC-41EF-AB57-825E72618044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CAD615-18EC-41EF-AB57-825E72618044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E2413E-2C38-4A9C-85CA-B9B520BE9891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E2413E-2C38-4A9C-85CA-B9B520BE9891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E2413E-2C38-4A9C-85CA-B9B520BE9891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E2413E-2C38-4A9C-85CA-B9B520BE9891}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {146F99BB-7B63-482E-988B-9305E1282DCD}
+	EndGlobalSection
+EndGlobal
