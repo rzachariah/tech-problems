@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-
-namespace findSmallestDivisor
+﻿namespace findSmallestDivisor
 {
     public class Result
     {
@@ -33,23 +29,22 @@ namespace findSmallestDivisor
                 : t.Length;
         }
 
-        private static bool isDivisibleBy(string subject, string candidate)
+        private static bool isDivisibleBy(string dividend, string divisor)
         {
-            if (subject.Length < candidate.Length) return false;
-            if (candidate.Length == 0) return false;
-            if (subject.Length % candidate.Length != 0) return false;
+            if (dividend.Length < divisor.Length) return false;
+            if (divisor.Length == 0) return false;
+            if (dividend.Length % divisor.Length != 0) return false;
 
-            var factor = subject.Length / candidate.Length;
+            var factor = dividend.Length / divisor.Length;
 
-            var tRepeated = Enumerable.Repeat(candidate, factor)
-                .Aggregate(new StringBuilder(), (acc, next) =>
-                {
-                    acc.Append(next);
-                    return acc;
-                })
-                .ToString();
+            for (var segmentIndex = 0; segmentIndex < factor; segmentIndex++)
+            {
+                var offset = segmentIndex * divisor.Length;
+                var segment = dividend.Substring(offset, divisor.Length);
+                if (segment != divisor) return false;
+            }
 
-            return subject == tRepeated;
+            return true;
         }
     }
 }
