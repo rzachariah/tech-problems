@@ -1,4 +1,6 @@
-﻿namespace findSmallestDivisor
+﻿using System.Linq;
+
+namespace findSmallestDivisor
 {
     public class Result
     {
@@ -37,14 +39,19 @@
 
             var factor = dividend.Length / divisor.Length;
 
-            for (var segmentIndex = 0; segmentIndex < factor; segmentIndex++)
-            {
-                var offset = segmentIndex * divisor.Length;
-                var segment = dividend.Substring(offset, divisor.Length);
-                if (segment != divisor) return false;
-            }
+            return Enumerable.Range(0, factor)
+                .Aggregate(true, (acc, segmentIndex) =>
+                {
+                    if (!acc) return false;
+                    var start = segmentIndex * divisor.Length;
+                    return isPartialMatch(dividend, divisor, start);
+                });
+        }
 
-            return true;
+        private static bool isPartialMatch(string subject, string candidate, int start)
+        {
+            var segment = subject.Substring(start, candidate.Length);
+            return segment == candidate;
         }
     }
 }
