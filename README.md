@@ -8,9 +8,11 @@ dividing it by 2 and inserting the ceiling of that result back into the array.
 Minimize the sum of elements in the final array.
 
 ### Constraints
+```
 1 <= num[i] <= 10^4
 1 <= n <= 10^5
 1 <= k <= 10^7
+```
 
 ### Algorithm
 A naive solution is to halve-ceil the list maximum for k iterations. This has runtime O(kn).
